@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+    font-family: Lato;
+}
+
+/* scroll bar style */
+body::-webkit-scrollbar {
+    width: 0.7em;
+}
+   
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(212, 4, 4, 0.3);
+    background-color: black;
+    opacity: 0.1;
+}
+   
+body::-webkit-scrollbar-thumb {
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #afacb4, #9f9aaa);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #afacb4, #9f9aaa); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    outline: none;
+    border-radius: 2.5rem;  
+    opacity: .5;   
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background: -webkit-linear-gradient(to right, #929096, #847f8f);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #929096, #847f8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* main content style */
+body{
+    line-height: 1.6;
+    min-height: 100vh;
+    margin: 0;
+    font-weight: 400;
+    background: #2980B9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* style for body background if time between 5am and  6pm*/
+.night-time{
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Hero styles */
+.hero{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    box-shadow: 0px 5px 20px -15px #000;
+    background-color: rgba(0, 0 , 0, 0.7);
+}
+
+.solid-hero{
+    background-color: #000;
+}
+
+.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+  }
+
+.hero-body{
+    display: grid;
+    margin: 0 15px;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.logo{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: left;
+    text-decoration: none;
+}
+
+.title{
+    color: white;
+    font-size: 2em;
+    margin-left: 15px;
+}
+
+.search-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.form-input:focus{outline:none;}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+    
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+
+.form-input{
+    width: 100%;
+    height: 2.8rem;
+    color: #fff;
+    background: rgba(0, 0  , 0, 0.3);
+    outline: none;
+    border: 1px solid #1a598375;
+    border-radius: 1.625rem;
+    padding: 0 3.5rem 0 1.5rem;
+    font-size: 1rem;
+}
+
+.form-input:focus{
+    border: 1px solid rgba(252, 252, 252, 0.411);
+}
+
+.form-btn{
+    width: 3.5rem;
+    height: 2.8rem;
+    margin-left: -3.5rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.main{
+    margin-top: 100px;
+}
+
+
+/* main body styles */
+.card{
+    padding: 3.5rem;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+
+.card-info{
+    display: grid;
+    grid-template-columns: 25fr 2fr;
+    align-items: center;
+    justify-content: left;
+    color: white;
+    width: auto;
+}
+
+.location{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: -3.5rem;
+}
+
+.card-info .temp{
+    font-weight: bold;
+    font-size: 3.5rem;
+    margin-bottom: -1rem;
+}
+
+.card-info .desc{
+    font-weight: 600;
+}
+
+.right{
+    margin-top: -5rem;
+}
+
+.forecast .wrapper{
+    border: 1px solid rgba(0, 0  , 0, 0.3);
+    background-color: rgba(0, 0  , 0, 0.3);
+    border-radius: 1.625rem;
+    padding: 25px;
+}
+
+.wrapper .headings h3{
+    text-align: center;
+    font-size: 25px;
+    color:white
+}
+
+.forecast-info, .temp_lables{
+    display: grid;
+    grid-template-columns: 2fr 25fr;
+    align-items: center;
+    justify-content: left;
+    color: white;
+}
+
+.forecast .data, .float-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+}
+
+
+.forecast-info p, .day-label{
+    text-align: left;
+}
+
+.float-right .max{
+    margin-right: -8px;
+}
+
+
+/* for small screeens */
+@media only screen and (max-width: 600px) {
+    .hero-body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search{
+        width: 100%;
+    }
+
+    .search-bar{
+        margin-bottom: 15px;
+    }
+
+    .forecast .data, .float-right{
+        gap: 1.5rem;
+    }
+
+    .main{
+        margin-top: 125px;
+    }
+}
+
+
+
+
+
+
