@@ -5,16 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Weatherman</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+        <title>City Weather</title>
         <link rel="stylesheet" href="static/css/styles.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-        
-        <script>
-            var date_time = document.getElementsByClassName("date");
-            console.log(date_time[0].innerHTML);
-        </script>
-
+        <link rel="icon" type="img/x-icon" href="/static/graphics/weather-forecast.ico">
     </head>
     <body class="{{'night-time' if night}}">
         <header id="hero" class="hero transparent">
@@ -43,11 +37,11 @@
                     <div class="card">                        
                         <div class="card-info">
                             <div class="left">
-                                <div class="location">
-                                    <p class="card-text city">{{ weather.city }} </p>
+                                <div class="location">                                    
                                     <span class="material-symbols-outlined">
                                         location_on
                                     </span>
+                                    <p class="card-text city">{{ weather.city }} </p>
                                 </div>  
                                 <div class="data">                                  
                                     <h2 class="card-text temp">{{ weather.temp }}&deg; C</h2>
