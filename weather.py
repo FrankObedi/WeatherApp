@@ -24,8 +24,6 @@ def is_night(hour):
         return False
     return True
 
-#648fb20010c74c9f8de201608232202
-
 def get_forecast():
     # set a default city when website loads
     city = 'Toronto, Canada'        
@@ -35,14 +33,14 @@ def get_forecast():
         city = request.form.get('city')
     
     full_weather = 'http://api.weatherapi.com/v1/forecast.json?key={}&q={}&days=6&aqi=no&alerts=no'
-    forecast = requests.get(full_weather.format('648fb20010c74c9f8de201608232202',city)).json()    
+    forecast = requests.get(full_weather.format('98f5dfe9505742899b1172054232003',city)).json()    
     
     
     #   check for 404 error
     if forecast.get("error") != None:
         return 404    
     else:
-
+        print(forecast['location']['localtime'])
         hour = forecast['location']['localtime'].split(' ')[1].split(':')
         night = is_night(int(hour[0]))
 
