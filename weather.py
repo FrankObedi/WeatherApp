@@ -62,7 +62,7 @@ def get_forecast():
             icon = forecast["forecast"]["forecastday"][i]['day']['condition']['icon']
             data = {day: [math.floor(min_temp),math.floor(max_temp),icon]}
             forecast_data.update(data)
-    print("KEY =", key)
+    print(forecast_data)
     return weather_data, forecast_data, night
 
 
